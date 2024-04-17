@@ -1,0 +1,22 @@
+<nav id="nav-bar">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Shop Link with Left Margin -->
+      <%= link_to root_path, class: "text-gray-500 hover:underline py-2 rounded-md text-md font-medium", style: "margin-left: 2rem;" do %>
+        <h1 class="text-4xl italic text-md py-5 pl-3 text-red-500  hidden md:block"><span class="text-white font-bold">S</span>tyle<span class="text-white font">S</span>avvy</h1>
+      <% end %>
+
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <%= link_to root_path do %>
+          <%= image_tag 'logo.png', class: 'w-16 rounded-full' %>
+        <% end %>
+      </div>
+
+      <!-- Shopping Cart with Right Margin -->
+      <%= link_to cart_path, class: "text-gray-500 hover:underline py-2 rounded-md text-md font-medium", style: "margin-right: 2rem;" do %>
+        <%= icon 'fa-solid fa-2xl', 'shopping-cart', class: "text-white"%>
+      <% end %>
+    </div>
+  </div>
+</nav>
